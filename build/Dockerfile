@@ -1,6 +1,6 @@
 FROM centos:7
 
-LABEL version=0.1
+LABEL version=0.2
 RUN yum install -y bc sudo which
 
 RUN curl -sL bit.ly/zinst-install |bash
