@@ -1,17 +1,24 @@
 
 
 ## Install
-* How to install 
+* Git clone 1st
 
 ```
 git clone https://github.com/goody80/zinst_repository_docker.git
-cd zinst_repository_docker
 ```
+
+* Git clone for zinst packages (optional)
+```
+git clone https://github.com/goody80/Zinst_packages.git
+cp -Rfv ./Zinst_packages/* /zinst_repository_docker/dist/
+```
+
 
 ## Use
 * How to start the zinst repository server
 
 ```
+cd zinst_repository_docker
 docker-compose up -d
 ```
 
