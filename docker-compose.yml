@@ -5,4 +5,4 @@ services:
     ports:
     - 8080:80/tcp
     volumes:
-    - dist:/data/dist:rw
+    - ./dist:/data/dist:rw
