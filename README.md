@@ -44,7 +44,7 @@ zinst find
 version: '2'
 services:
   zinst-repository:
-    image: goody80/zinst_repository:latest
+    image: zinst/zinst_repository:latest
     ports:
     - 8080:80/tcp
     volumes:
