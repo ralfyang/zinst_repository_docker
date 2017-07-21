@@ -1,12 +1,15 @@
 FROM centos:7
 
-LABEL version=0.3
+LABEL version=0.4
 RUN yum install -y bc sudo which crontabs.noarch tar
 
 RUN curl -sL bit.ly/zinst-install |bash
 RUN zinst i zinst_simple_server -stable 2> /dev/null
-EXPOSE 80
 
 RUN yum clean all; yum clean all
 
-ENTRYPOINT ["/usr/bin/zinst", "run", "package_server"]
+COPY entrypoint.sh /data/bin/entrypoint.sh
+RUN chmod 755 /data/bin/entrypoint.sh
+
+ENTRYPOINT [ "/data/bin/entrypoint.sh" ]
+EXPOSE 80
