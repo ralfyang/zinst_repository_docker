@@ -1,8 +1,8 @@
 version: '2'
 services:
   zinst-repository:
-    image: zinst/zinst_repository:0.4
+    image: zinst/zinst_repository:latest
     ports:
-    - 8080:80/tcp
+    - 8080:80
     volumes:
     - ./dist:/data/dist:rw
